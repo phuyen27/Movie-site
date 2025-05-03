@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className=" fixed top-0 left-0 right-0 bg-black backdrop-blur-sm z-50 border-b border-e-black shadow-amber-200">
       <div className="w-full flex justify-between items-center container mx-auto px-4 sm:px-6 lg:px-8 md:h-20 h-16">
         <div className="cursor-pointer text-xl font-bold text-orange-500">🎬 MovieSite</div>
-
+        
         {/* Menu desktop */}
         <ul className="hidden md:flex gap-6 space-x-8 ">
           {NavLinks.map(link => (
