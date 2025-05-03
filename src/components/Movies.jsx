@@ -3,7 +3,7 @@ import { db } from '../firebase';
 import { ref, onValue } from 'firebase/database';
 import { Link } from 'react-router-dom';
 
-const Movies = () => {
+const Movies = ({ searchTerm }) =>  {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState({});
   const [genreList, setGenreList] = useState([]);
@@ -38,9 +38,14 @@ const Movies = () => {
     });
   }, []);
 
-  const filteredMovies = selectedGenre
-    ? movies.filter((movie) => movie.genreNames.includes(selectedGenre))
-    : movies;
+  const filteredMovies = movies
+  .filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .filter((movie) =>
+    selectedGenre ? movie.genreNames.includes(selectedGenre) : true
+  );
+
 
   const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
   const indexOfLastMovie = currentPage * moviesPerPage;
@@ -54,7 +59,7 @@ const Movies = () => {
   };
 
   return (
-    <section className='container mx-auto items-center pt-44 pb-20 px-4 sm:px-6 lg:px-8'>
+    <section className='container mx-auto items-center pt-44 pb-20 px-4 sm:px-6 lg:px-8' id='movies'>
       <h2 className="text-3xl font-bold text-white mb-6">🎬 Movies</h2>
 
       {/* Genre filter */}

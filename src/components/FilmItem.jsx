@@ -24,7 +24,7 @@ const FilmItem = () => {
   if (!film) return <div className="text-white p-6">Loading...</div>;
 
   return (
-    <section className="min-h-screen py-14 px-6 sm:px-10 lg:px-24 flex items-center justify-center bg-black">
+    <section className="min-h-screen py-5 px-6 sm:px-10 lg:px-24 flex items-center justify-center bg-black">
       {/* Nội dung chính */}
       <div
         className={`w-full max-w-7xl transition-all duration-700 ease-in-out transform ${
