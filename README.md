@@ -1,12 +1,21 @@
-# React + Vite
+# Movie Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Movie Site** project! This is a movie discovery website where users can explore movies, TV series, and top-rated films. The website is built with **React** and integrates with **Firebase** for real-time data fetching.
 
-Currently, two official plugins are available:
+## Features
+- **Responsive Design**: The website is fully responsive and works well on both desktop and mobile devices.
+- **Navigation**: The navigation bar contains links to various sections such as Home, Movies, TV Series, Top Rated, Genres, New Releases, and My List.
+- **Search Functionality**: Users can search for movies or TV shows using a search bar located in the navbar.
+- **Real-time Data**: Movie and TV series information (like genres, titles, and posters) are fetched from **Firebase Realtime Database**.
+- **Movie and TV Series Filters**: Filter movies by genre and explore top-rated films.
+- **Pagination**: The movie list is paginated to display a limited number of movies per page, improving the user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: A JavaScript library for building user interfaces.
+- **Firebase**: A backend-as-a-service to handle real-time data.
+- **Tailwind CSS**: A utility-first CSS framework to style the components.
+- **React Router**: A library to manage navigation between different routes of the site.
+- **React Icons**: A library to use vector icons in React apps.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+![Home Preview](img/Home.png)
