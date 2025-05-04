@@ -8,6 +8,7 @@ import TVSeries from './components/TVSeries'
 import Top from './components/Top'
 import FilmItem from './components/FilmItem'
 import { FiChevronDown } from 'react-icons/fi';
+import Contact from './components/Contact'
 
 function AppWrapper() {
   const [showFilm, setShowFilm] = useState(true);
@@ -49,6 +50,7 @@ function AppWrapper() {
 
       <TVSeries />
       <Top />
+      <Contact/>
     </main>
   );
 }
